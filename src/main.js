@@ -22,16 +22,16 @@ var XXM = {
     }
 }
 
-function inIframe () {
+function notInIframe () {
     try {
-        return window.self !== window.top;
-    } catch (e) {
-        return true;
-    }
+        return window.self === window.top;
+    } catch (e) {}
+    return false;
 }
 
 XXM.loadMore = function () {
-
+    console.log("load more js bellow ...")
+    /// XXM.loadJS("src/your-code.js", () => console.log("done"), document.body)
 }
 
 XXM.loadAllLibs = function () {
@@ -48,7 +48,7 @@ XXM.loadAllLibs = function () {
 }
 
 document.addEventListener('DOMContentLoaded', function(event, aa) {
-    if (!inIframe()) {
+    if (notInIframe()) {
         XXM.loadAllLibs()
     }
 })
