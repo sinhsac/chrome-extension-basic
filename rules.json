@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "google.com/aaaa",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://example.com"
+      }
+    },
+    "condition": {
+      "urlFilter": "google1.com",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "h1",
+          "operation": "set",
+          "value": "v4"
+        },
+        {
+          "header": "h2",
+          "operation": "append",
+          "value": "v5"
+        },
+        {
+          "header": "h3",
+          "operation": "append",
+          "value": "v6"
+        }
+      ]
+    },
+    "condition": {
+      "regexFilter": "(www\\.flickr\\.com|flickr\\.com)",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  }
+]
