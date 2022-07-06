@@ -1,0 +1,1 @@
+chrome.devtools.panels.create("Simple Devtool", null, "/html/devtools_panel.html", null);

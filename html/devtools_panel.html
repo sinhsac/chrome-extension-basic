@@ -1,0 +1,34 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/ext-assets/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container-fluid mt-2">
+    <div class="alert alert-info" id="console"></div>
+    <button class="btn btn-outline-primary" id="loadAlbumsToSave">Load To Save <span id="totalAlbums" class="badge badge-info">0</span> albums</button>
+    <input class="form-control" name="instagramUsername" id="instagramUsername" >
+    <div class="text-hide alert alert-danger" id="msg"></div>
+    <div class="row">
+        <div class="col-12">
+            <div id="infoUser"></div>
+            <div id="fbVideos"></div>
+            <table class="table table-bordered">
+                <thead>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Title</th>
+                    <th>URL</th>
+                </thead>
+                <tbody id="databody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="/ext-assets/js/jquery.min.js"></script>
+<script src="/ext-assets/js/bootstrap.min.js"></script>
+<script type="module" src="/src/devtools_panel.js"></script>
+</body>
+</html>
